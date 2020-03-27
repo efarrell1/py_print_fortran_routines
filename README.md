@@ -164,8 +164,8 @@ print_fortran_routines.basic_mesa_f_files()
 
 
 
-## Simple Example Application (included in package in pfr_test)
-The following code shows a simple example of print_fortran_routines and <span style="font-variant:small-caps;">MESA</span> in action. run the following python script in a MESA work directory, with the bash script below saved as ``compile_run_mesa.sh``.
+## Simple Example Application (included in package in pfr_mesa_example)
+The following code shows a simple example of print_fortran_routines and <span style="font-variant:small-caps;">MESA</span> in action. Simply run the following python script in a MESA work directory, with the bash script below saved as ``compile_run_mesa.sh``.
 
 ```python
 
