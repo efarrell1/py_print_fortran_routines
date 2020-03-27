@@ -1,0 +1,17 @@
+&star_job
+
+show_log_description_at_start = .false.
+pgstar_flag = .false.
+
+steps_to_take_before_terminate = 1
+
+/ ! end of star_job namelist
+
+&controls
+
+initial_mass = 10
+
+/ ! end of controls namelist
+
+&pgstar
+/

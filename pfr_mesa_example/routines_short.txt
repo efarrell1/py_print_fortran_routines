@@ -1,0 +1,41 @@
+start -- subroutine do_run_star -- run_star.f
+		start -- subroutine extras_controls -- standard_run_star_extras.inc
+		finsh -- subroutine extras_controls -- standard_run_star_extras.inc
+		start -- subroutine extras_startup -- standard_run_star_extras.inc
+		finsh -- subroutine extras_startup -- standard_run_star_extras.inc
+		start -- integer function extras_start_step -- standard_run_star_extras.inc
+		finsh -- integer function extras_start_step -- standard_run_star_extras.inc
+		start -- integer function do_evolve_step_part1 -- evolve.f90
+				start -- integer function prepare_for_new_step -- evolve.f90
+						start -- subroutine set_start_of_step_info -- evolve.f90
+						finsh -- subroutine set_start_of_step_info -- evolve.f90
+				finsh -- integer function prepare_for_new_step -- evolve.f90
+				start -- integer function prepare_for_new_try -- evolve.f90
+				finsh -- integer function prepare_for_new_try -- evolve.f90
+		finsh -- integer function do_evolve_step_part1 -- evolve.f90
+		start -- integer function do_evolve_step_part2 -- evolve.f90
+				start -- subroutine set_Eulerian_Lagrangian_for_eps_grav -- evolve.f90
+				start -- subroutine do_set_vars -- evolve.f90
+				finsh -- subroutine do_set_vars -- evolve.f90
+				start -- subroutine save_start_values -- evolve.f90
+				finsh -- subroutine save_start_values -- evolve.f90
+				start -- logical function okay_energy_conservation -- evolve.f90
+				finsh -- logical function okay_energy_conservation -- evolve.f90
+		finsh -- integer function do_evolve_step_part2 -- evolve.f90
+		start -- integer function extras_finish_step -- standard_run_star_extras.inc
+		finsh -- integer function extras_finish_step -- standard_run_star_extras.inc
+		start -- integer function pick_next_timestep -- evolve.f90
+		finsh -- integer function pick_next_timestep -- evolve.f90
+		start -- integer function how_many_extra_profile_columns -- standard_run_star_extras.inc
+		finsh -- integer function how_many_extra_profile_columns -- standard_run_star_extras.inc
+		start -- integer function how_many_extra_profile_header_items -- standard_run_star_extras.inc
+		finsh -- integer function how_many_extra_profile_header_items -- standard_run_star_extras.inc
+		start -- integer function finish_step -- evolve.f90
+				start -- integer function how_many_extra_history_columns -- standard_run_star_extras.inc
+				finsh -- integer function how_many_extra_history_columns -- standard_run_star_extras.inc
+				start -- integer function how_many_extra_history_header_items -- standard_run_star_extras.inc
+				finsh -- integer function how_many_extra_history_header_items -- standard_run_star_extras.inc
+		finsh -- integer function finish_step -- evolve.f90
+		start -- subroutine extras_after_evolve -- standard_run_star_extras.inc
+		finsh -- subroutine extras_after_evolve -- standard_run_star_extras.inc
+finsh -- subroutine do_run_star -- run_star.f

@@ -1,0 +1,225 @@
+start -- subroutine do_run_star -- run_star.f
+		start -- subroutine extras_controls -- standard_run_star_extras.inc
+		finsh -- subroutine extras_controls -- standard_run_star_extras.inc
+		start -- subroutine set_net -- net.f90
+				start -- subroutine net_tables -- net.f90
+				finsh -- subroutine net_tables -- net.f90
+				start -- subroutine default_set_op_mono_factors -- net.f90
+				finsh -- subroutine default_set_op_mono_factors -- net.f90
+		finsh -- subroutine set_net -- net.f90
+		start -- subroutine set_micro_vars -- micro.f90
+				start -- subroutine set_eos -- micro.f90
+						start -- subroutine do_eos -- micro.f90
+						finsh -- subroutine do_eos -- micro.f90
+				finsh -- subroutine set_eos -- micro.f90
+				start -- subroutine do_net -- net.f90
+		finsh -- integer function get_screening_mode -- net.f90
+		finsh -- integer function get_screening_mode -- net.f90
+				finsh -- subroutine do_net -- net.f90
+		finsh -- subroutine set_micro_vars -- micro.f90
+		start -- subroutine add_overshooting  -- overshoot.f90
+		start -- subroutine extras_startup -- standard_run_star_extras.inc
+		finsh -- subroutine extras_startup -- standard_run_star_extras.inc
+		start -- integer function extras_start_step -- standard_run_star_extras.inc
+		finsh -- integer function extras_start_step -- standard_run_star_extras.inc
+		start -- integer function do_evolve_step_part1 -- evolve.f90
+				start -- integer function prepare_for_new_step -- evolve.f90
+						start -- subroutine set_start_of_step_info -- evolve.f90
+								start -- subroutine set_micro_vars -- micro.f90
+										start -- subroutine set_eos -- micro.f90
+												start -- subroutine do_eos -- micro.f90
+												finsh -- subroutine do_eos -- micro.f90
+										finsh -- subroutine set_eos -- micro.f90
+										start -- subroutine do_net -- net.f90
+										finsh -- subroutine do_net -- net.f90
+								finsh -- subroutine set_micro_vars -- micro.f90
+				start -- subroutine add_overshooting  -- overshoot.f90
+				start -- logical function failed -- evolve.f90
+				start -- logical function failed -- evolve.f90
+				start -- logical function failed -- evolve.f90
+				start -- logical function failed -- evolve.f90
+						finsh -- subroutine set_start_of_step_info -- evolve.f90
+				start -- logical function failed -- evolve.f90
+				start -- logical function failed -- evolve.f90
+				finsh -- integer function prepare_for_new_step -- evolve.f90
+				start -- integer function prepare_for_new_try -- evolve.f90
+				finsh -- integer function prepare_for_new_try -- evolve.f90
+				start -- subroutine set_mdot -- winds.f90
+						start -- subroutine eval_super_eddington_wind -- winds.f90
+						start -- subroutine eval_wind_for_scheme -- winds.f90
+						finsh -- subroutine eval_wind_for_scheme -- winds.f90
+				finsh -- subroutine set_mdot -- winds.f90
+		finsh -- integer function do_evolve_step_part1 -- evolve.f90
+		start -- integer function do_evolve_step_part2 -- evolve.f90
+				start -- subroutine do_adjust_mass -- adjust_mass.f90
+				start -- subroutine set_Eulerian_Lagrangian_for_eps_grav -- evolve.f90
+				start -- subroutine do_set_vars -- evolve.f90
+						start -- subroutine set_micro_vars -- micro.f90
+								start -- subroutine set_eos -- micro.f90
+										start -- subroutine do_eos -- micro.f90
+										finsh -- subroutine do_eos -- micro.f90
+								finsh -- subroutine set_eos -- micro.f90
+								start -- subroutine do_net -- net.f90
+								finsh -- subroutine do_net -- net.f90
+						finsh -- subroutine set_micro_vars -- micro.f90
+				start -- subroutine add_overshooting  -- overshoot.f90
+				finsh -- subroutine do_set_vars -- evolve.f90
+				start -- subroutine save_start_values -- evolve.f90
+						start -- subroutine set_L_burn_by_category -- solve_hydro.f90
+						finsh -- subroutine set_L_burn_by_category -- solve_hydro.f90
+				finsh -- subroutine save_start_values -- evolve.f90
+				start -- integer function do_struct_burn_mix -- struct_burn_mix.f90
+						start -- subroutine save_pre_values -- struct_burn_mix.f90
+						finsh -- subroutine save_pre_values -- struct_burn_mix.f90
+						start -- subroutine set_tol_correction -- solve_hydro.f90
+						finsh -- subroutine set_tol_correction -- solve_hydro.f90
+						start -- subroutine set_surf_info -- solve_hydro.f90
+						finsh -- subroutine set_surf_info -- solve_hydro.f90
+						start -- integer function do_hydro_converge -- solve_hydro.f90
+								start -- subroutine alloc_for_decsol -- solve_hydro.f90
+								finsh -- subroutine alloc_for_decsol -- solve_hydro.f90
+								start -- subroutine work_sizes_for_newton -- solve_hydro.f90
+										start -- subroutine get_newton_work_sizes -- star_newton.f90
+										finsh -- subroutine get_newton_work_sizes -- star_newton.f90
+								finsh -- subroutine work_sizes_for_newton -- solve_hydro.f90
+								start -- subroutine alloc_for_newton -- solve_hydro.f90
+								finsh -- subroutine alloc_for_newton -- solve_hydro.f90
+								start -- integer function do_hydro_newton -- solve_hydro.f90
+										start -- subroutine set_xh -- solve_hydro.f90
+										finsh -- subroutine set_xh -- solve_hydro.f90
+										start -- subroutine hydro_newton_step -- solve_hydro.f90
+												start -- subroutine newt -- solve_hydro.f90
+														start -- subroutine newton -- star_newton.f90
+																start -- subroutine do_newton -- star_newton.f90
+																		start -- subroutine set_param_defaults -- star_newton.f90
+																		finsh -- subroutine set_param_defaults -- star_newton.f90
+																		start -- subroutine pointers -- star_newton.f90
+																		finsh -- subroutine pointers -- star_newton.f90
+																		start -- subroutine prepare_for_eval_eps_grav_and_partials -- eps_grav.f90
+																		start -- subroutine setmatrix -- star_newton.f90
+																		start -- logical function do_enter_setmatrix -- star_newton.f90
+																		start -- subroutine prepare_for_eval_eps_grav_and_partials -- eps_grav.f90
+																		finsh -- logical function do_enter_setmatrix -- star_newton.f90
+																		start -- logical function solve_equ -- star_newton.f90
+																				start -- subroutine factor_mtx -- star_newton.f90
+																				finsh -- subroutine factor_mtx -- star_newton.f90
+																				start -- subroutine solve_mtx -- star_newton.f90
+																						start -- subroutine show_solve_input -- star_newton.f90
+																						finsh -- subroutine show_solve_input -- star_newton.f90
+																						start -- subroutine show_solve_output -- star_newton.f90
+																						finsh -- subroutine show_solve_output -- star_newton.f90
+																				finsh -- subroutine solve_mtx -- star_newton.f90
+																		finsh -- logical function solve_equ -- star_newton.f90
+																		start -- subroutine adjust_correction -- star_newton.f90
+																		start -- subroutine apply_coeff -- star_newton.f90
+																		start -- subroutine set_micro_vars -- micro.f90
+																				start -- subroutine set_eos -- micro.f90
+																						start -- subroutine do_eos -- micro.f90
+																						finsh -- subroutine do_eos -- micro.f90
+																				finsh -- subroutine set_eos -- micro.f90
+																				start -- subroutine do_net -- net.f90
+																				finsh -- subroutine do_net -- net.f90
+																		finsh -- subroutine set_micro_vars -- micro.f90
+																		start -- subroutine prepare_for_eval_eps_grav_and_partials -- eps_grav.f90
+																		start -- subroutine setmatrix -- star_newton.f90
+																		start -- logical function do_enter_setmatrix -- star_newton.f90
+																		start -- subroutine prepare_for_eval_eps_grav_and_partials -- eps_grav.f90
+																		finsh -- logical function do_enter_setmatrix -- star_newton.f90
+																		start -- logical function solve_equ -- star_newton.f90
+																				start -- subroutine factor_mtx -- star_newton.f90
+																				finsh -- subroutine factor_mtx -- star_newton.f90
+																				start -- subroutine solve_mtx -- star_newton.f90
+																						start -- subroutine show_solve_input -- star_newton.f90
+																						finsh -- subroutine show_solve_input -- star_newton.f90
+																						start -- subroutine show_solve_output -- star_newton.f90
+																						finsh -- subroutine show_solve_output -- star_newton.f90
+																				finsh -- subroutine solve_mtx -- star_newton.f90
+																		finsh -- logical function solve_equ -- star_newton.f90
+																		start -- subroutine adjust_correction -- star_newton.f90
+																		start -- subroutine apply_coeff -- star_newton.f90
+																		start -- subroutine set_micro_vars -- micro.f90
+																				start -- subroutine set_eos -- micro.f90
+																						start -- subroutine do_eos -- micro.f90
+																						finsh -- subroutine do_eos -- micro.f90
+																				finsh -- subroutine set_eos -- micro.f90
+																				start -- subroutine do_net -- net.f90
+																				finsh -- subroutine do_net -- net.f90
+																		finsh -- subroutine set_micro_vars -- micro.f90
+																		start -- subroutine prepare_for_eval_eps_grav_and_partials -- eps_grav.f90
+																		start -- subroutine setmatrix -- star_newton.f90
+																		start -- logical function do_enter_setmatrix -- star_newton.f90
+																		start -- subroutine prepare_for_eval_eps_grav_and_partials -- eps_grav.f90
+																		finsh -- logical function do_enter_setmatrix -- star_newton.f90
+																		start -- logical function solve_equ -- star_newton.f90
+																				start -- subroutine factor_mtx -- star_newton.f90
+																				finsh -- subroutine factor_mtx -- star_newton.f90
+																				start -- subroutine solve_mtx -- star_newton.f90
+																						start -- subroutine show_solve_input -- star_newton.f90
+																						finsh -- subroutine show_solve_input -- star_newton.f90
+																						start -- subroutine show_solve_output -- star_newton.f90
+																						finsh -- subroutine show_solve_output -- star_newton.f90
+																				finsh -- subroutine solve_mtx -- star_newton.f90
+																		finsh -- logical function solve_equ -- star_newton.f90
+																		start -- subroutine adjust_correction -- star_newton.f90
+																		start -- subroutine apply_coeff -- star_newton.f90
+																		start -- subroutine set_micro_vars -- micro.f90
+																				start -- subroutine set_eos -- micro.f90
+																						start -- subroutine do_eos -- micro.f90
+																						finsh -- subroutine do_eos -- micro.f90
+																				finsh -- subroutine set_eos -- micro.f90
+																				start -- subroutine do_net -- net.f90
+																				finsh -- subroutine do_net -- net.f90
+																		finsh -- subroutine set_micro_vars -- micro.f90
+										start -- subroutine prepare_for_eval_eps_grav_and_partials -- eps_grav.f90
+																finsh -- subroutine do_newton -- star_newton.f90
+														finsh -- subroutine newton -- star_newton.f90
+												finsh -- subroutine newt -- solve_hydro.f90
+										finsh -- subroutine hydro_newton_step -- solve_hydro.f90
+										start -- logical function check_after_converge -- solve_hydro.f90
+										finsh -- logical function check_after_converge -- solve_hydro.f90
+								finsh -- integer function do_hydro_newton -- solve_hydro.f90
+						finsh -- integer function do_hydro_converge -- solve_hydro.f90
+						start -- integer function do_smooth_conv_bdy_and_mix_omega -- struct_burn_mix.f90
+						finsh -- integer function do_smooth_conv_bdy_and_mix_omega -- struct_burn_mix.f90
+				finsh -- integer function do_struct_burn_mix -- struct_burn_mix.f90
+				start -- subroutine set_micro_vars -- micro.f90
+						start -- subroutine set_eos -- micro.f90
+								start -- subroutine do_eos -- micro.f90
+								finsh -- subroutine do_eos -- micro.f90
+						finsh -- subroutine set_eos -- micro.f90
+						start -- subroutine do_net -- net.f90
+						finsh -- subroutine do_net -- net.f90
+				finsh -- subroutine set_micro_vars -- micro.f90
+				start -- logical function okay_energy_conservation -- evolve.f90
+				finsh -- logical function okay_energy_conservation -- evolve.f90
+				start -- subroutine set_L_burn_by_category -- solve_hydro.f90
+				finsh -- subroutine set_L_burn_by_category -- solve_hydro.f90
+		finsh -- integer function do_evolve_step_part2 -- evolve.f90
+		start -- integer function extras_finish_step -- standard_run_star_extras.inc
+		finsh -- integer function extras_finish_step -- standard_run_star_extras.inc
+		start -- integer function pick_next_timestep -- evolve.f90
+				start -- integer function timestep_controller -- timestep.f90
+						start -- integer function do_timestep_limits -- timestep.f90
+								start -- integer function check_varcontrol_limit -- timestep.f90
+								finsh -- integer function check_varcontrol_limit -- timestep.f90
+								start -- logical function return_now -- timestep.f90
+								start -- subroutine filter_dt_next -- timestep.f90
+								finsh -- subroutine filter_dt_next -- timestep.f90
+						finsh -- integer function do_timestep_limits -- timestep.f90
+				finsh -- integer function timestep_controller -- timestep.f90
+		finsh -- integer function pick_next_timestep -- evolve.f90
+		start -- integer function how_many_extra_profile_columns -- standard_run_star_extras.inc
+		finsh -- integer function how_many_extra_profile_columns -- standard_run_star_extras.inc
+		start -- integer function how_many_extra_profile_header_items -- standard_run_star_extras.inc
+		finsh -- integer function how_many_extra_profile_header_items -- standard_run_star_extras.inc
+		start -- integer function finish_step -- evolve.f90
+				start -- integer function how_many_extra_history_columns -- standard_run_star_extras.inc
+				finsh -- integer function how_many_extra_history_columns -- standard_run_star_extras.inc
+				start -- integer function how_many_extra_history_header_items -- standard_run_star_extras.inc
+				finsh -- integer function how_many_extra_history_header_items -- standard_run_star_extras.inc
+		finsh -- integer function finish_step -- evolve.f90
+		start -- subroutine extras_after_evolve -- standard_run_star_extras.inc
+		finsh -- subroutine extras_after_evolve -- standard_run_star_extras.inc
+		start -- subroutine shutdown_microphys -- micro.f90
+		finsh -- subroutine shutdown_microphys -- micro.f90
+finsh -- subroutine do_run_star -- run_star.f
