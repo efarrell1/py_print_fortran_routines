@@ -37,7 +37,9 @@ I also include an folder which shows you how to use print_fortran_routines calle
 
 Tested for mesa-r11701 and mesa-r12778, though should in principle work for all versions. Note that the test folder only works for mesa-r12778 due to changes in run_star_extras.f, though you can just apply print_fortran_routines to your own or any <span style="font-variant:small-caps;">MESA</span> model.
 
-## Quick Start with print_fortran_routines & MESA
+___
+
+## Very Quick Start:
 1. Make a (compiled) copy of your current installation of <span style="font-variant:small-caps;">MESA</span>.
 2. In ``pfr_mesa_example/pfr_test.py``, set ``mesa_dir`` and ``mesa_dir_print`` to your main and newly created installation of <span style="font-variant:small-caps;">MESA</span> respectively.
 3. Run `pfr_test.py` - it will do the following:
@@ -46,6 +48,7 @@ Tested for mesa-r11701 and mesa-r12778, though should in principle work for all 
     3. Run pfr.modify_mesa_terminal_output producing output files called `'routines_short.txt'`, `'routines_medium.txt'` and `'routines_long.txt'`.
 4. Done!
 
+___
 
 ## Medium Start with print_fortran_routines & <span style="font-variant:small-caps;">MESA</span>
 1. Make a (compiled) copy of your current installation of <span style="font-variant:small-caps;">MESA</span>.
