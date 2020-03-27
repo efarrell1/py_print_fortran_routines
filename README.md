@@ -40,9 +40,10 @@ Tested for mesa-r11701 and mesa-r12778, though should in principle work for all 
 ___
 
 ## Very Quick Start:
-1. Make a (compiled) copy of your current installation of <span style="font-variant:small-caps;">MESA</span>.
-2. In ``pfr_mesa_example/pfr_test.py``, set ``mesa_dir`` and ``mesa_dir_print`` to your main and newly created installation of <span style="font-variant:small-caps;">MESA</span> respectively.
-3. Run `pfr_test.py` - it will do the following:
+1. Copy your current installation of <span style="font-variant:small-caps;">MESA</span> and compile it.
+2. ``cd`` to ``pfr_mesa_example/pfr_test.py`` and set the variables ``mesa_dir`` and ``mesa_dir_print`` at the top of the script.
+``mesa_dir`` should be your main MESA installation. ``mesa_dir_print`` is the directory you created in step 1.
+3. Run `pfr_test.py`. It will do the following:
     1. Modify a selection of <span style="font-variant:small-caps;">MESA</span> Fortran files
     2. Run a <span style="font-variant:small-caps;">MESA</span> model for one timestep producing an output file called `'output.txt'`.
     3. Run pfr.modify_mesa_terminal_output producing output files called `'routines_short.txt'`, `'routines_medium.txt'` and `'routines_long.txt'`.
