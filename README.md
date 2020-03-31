@@ -52,7 +52,7 @@ ___
 ___
 
 ## Medium Start with print_fortran_routines & <span style="font-variant:small-caps;">MESA</span>
-1. Make a (compiled) copy of your current installation of <span style="font-variant:small-caps;">MESA</span>.
+1. Make a (compiled) copy of your current installation of <span style="font-variant:small-caps;">MESA</span>. Make an empty file called skip_test in the main directory of your new copy of <span style="font-variant:small-caps;">MESA</span> (this skips tests when you re-compile with modified .f90 files).
 
 2. Use ``pfr.write_mesa_routines(mesa_dir, mesa_dir_print, files)`` to insert `write(*,*)` statements into Fortran Files in <span style="font-variant:small-caps;">MESA</span> where:
    - mesa_dir is your main installation of <span style="font-variant:small-caps;">MESA</span>
